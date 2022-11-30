@@ -1,0 +1,34 @@
+<!--The 'step_code' value from the .js file should be used-->
+<li id="step_code" class="checkout-name" data-bind="fadeVisible: isVisible">
+    <div class="step-title" data-bind="i18n: 'Full Name'" data-role="title"></div>
+    <div id="checkout-step-name"
+         class="step-content"
+         data-role="content">
+
+        <form id="co-checkout-form" class="form" name="formName" data-bind="submit: navigateToNextStep" novalidate="novalidate">
+            <fieldset class="fieldset required">
+                <div class="field required">
+
+                    <label class="label" for="checkout-input"></label>
+                    <div class="_with-tooltip">
+                        <input id="checkout-input" class="checkout-input" name="inputName"
+                               data-validate="{required:true}"/>
+
+                        <div role="alert"
+                             if="errorValidationMessage().length"
+                             class="message notice">
+                            <span text="errorValidationMessage()"></span>
+                        </div>
+
+                        <div class="primary">
+                        <button data-role="opc-continue" type="submit" class="button action continue primary">
+                            <span data-bind="click: navigateToNextStep, i18n: 'Next'"></span>
+                        </button>
+                        </div>
+
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</li>
