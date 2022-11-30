@@ -8,7 +8,7 @@ define([
 
     return Component.extend({
         defaults: {
-            template: 'Elogic_sidebar-for-custom-checkout/checkout-sidebar',
+            template: 'Elogic_sidebarForCustomCheckout',
         },
 
         getGrandTotal: function() {
@@ -18,7 +18,7 @@ define([
             let result = freeShipping - sum;
 
             return result;
-            
+
         },
     });
 });

@@ -1,6 +1,6 @@
 <?php
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Elogic_sidebar-for-custom-checkout',
+    'Elogic_sidebarForCustomCheckout',
     __DIR__
 );
