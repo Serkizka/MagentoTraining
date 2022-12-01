@@ -10,6 +10,7 @@
 </type>
 <type name="Elogic\sidebarForCustomCheckout\Model\ConfigProvider">
     <arguments>
+<!--    checkout-cms is identif of your block    -->
         <argument name="blockId" xsi:type="string">checkout-cms</argument>
     </arguments>
 </type>
