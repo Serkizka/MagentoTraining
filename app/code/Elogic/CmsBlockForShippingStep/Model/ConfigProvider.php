@@ -1,6 +1,6 @@
 <?php
 
-namespace Elogic\sidebarForCustomCheckout\Model;
+namespace Elogic\CmsBlockForShippingStep\Model;
 
 use Magento\Checkout\Model\ConfigProviderInterface;
 use Magento\Framework\View\LayoutInterface;

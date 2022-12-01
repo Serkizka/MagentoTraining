@@ -4,11 +4,11 @@
 <type name="Magento\Checkout\Model\CompositeConfigProvider">
     <arguments>
         <argument name="configProviders" xsi:type="array">
-            <item name="cms_block_config_provider" xsi:type="object">Elogic\sidebarForCustomCheckout\Model\ConfigProvider</item>
+            <item name="cms_block_config_provider" xsi:type="object">Elogic\CmsBlockForShippingStep\Model\ConfigProvider</item>
         </argument>
     </arguments>
 </type>
-<type name="Elogic\sidebarForCustomCheckout\Model\ConfigProvider">
+<type name="Elogic\CmsBlockForShippingStep\Model\ConfigProvider">
     <arguments>
 <!--    checkout-cms is identif of your block    -->
         <argument name="blockId" xsi:type="string">checkout-cms</argument>
