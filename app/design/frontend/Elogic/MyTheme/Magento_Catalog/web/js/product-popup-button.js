@@ -3,13 +3,13 @@ define(["jquery"], function ($) {
         let clickedBtnID = $(this).data('id');
         console.log(clickedBtnID);
         $("#modal-"+clickedBtnID.toString()).addClass("active");
-        $("#overlay").addClass("active");
+        $("#overlay-"+clickedBtnID.toString()).addClass("active");
     });
 
     $(".modal-button").click(function(){
         let crossId = $(this).data('id');
         console.log(crossId);
         $(".modal").removeClass("active");
-        $("#overlay").removeClass("active");
+        $(".overlay").removeClass("active");
     })
 })

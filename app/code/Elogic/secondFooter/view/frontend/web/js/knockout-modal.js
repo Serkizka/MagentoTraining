@@ -16,7 +16,7 @@
 //         const viewModel = {
 //             open: function () {
 //                 $('.modal').addClass('active');
-//                 $('#overlay').addClass('active');
+//                 $('.overlay').addClass('active');
 //                 getRandomNumber();
 //             },
 //             check: function () {
@@ -43,7 +43,7 @@
 //             },
 //             close: function () {
 //                 $('.modal').removeClass('active');
-//                 $('#overlay').removeClass('active');
+//                 $('.overlay').removeClass('active');
 //                 newArray.removeAll();
 //             },
 //             newArray: newArray,

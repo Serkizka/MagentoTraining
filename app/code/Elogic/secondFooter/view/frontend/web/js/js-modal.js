@@ -1,7 +1,7 @@
 // =====================================modal=======================================
 // let modal = document.getElementById("modal");
 // let btn = document.getElementById("footer-button");
-// let overlay = document.getElementById("overlay");
+// let overlay = document.getElementByClassName("overlay");
 // let closeBtn = document.getElementById("modal-close");
 //
 //
