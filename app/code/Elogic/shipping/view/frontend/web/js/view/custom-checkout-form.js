@@ -1,11 +1,13 @@
-/*global define*/
 define([
-    'Magento_Ui/js/form/form',
-    "uiComponent",
+    'jquery',
     'ko',
+    'Magento_Ui/js/form/form',
+    'uiComponent',
+    'Magento_Checkout/js/model/quote',
     'domReady!',
-], function(Component) {
+], function ($, ko, Component, quote) {
     'use strict';
+
     return Component.extend({
         defaults: {
             template: 'Elogic_shipping/shipping',
@@ -13,7 +15,9 @@ define([
             shippingFormTemplate: 'Magento_Checkout/shipping-address/form',
             shippingMethodListTemplate: 'Magento_Checkout/shipping-address/shipping-method-list',
             shippingMethodItemTemplate: 'Magento_Checkout/shipping-address/shipping-method-item',
+            granTemplate: 'Magento_Checkout/summary/grand-total'
         },
+
         initialize: function () {
             this._super();
             // component initialization logic
@@ -25,20 +29,15 @@ define([
          *
          * This method can have any name.
          */
-        setShippingInformation: function() {
-            // trigger form validation
 
-            // verify that form data is valid
-            let errorValidationMessage = ko.observable(false);
-            let userText = document.forms["formName"]["inputName"].value;
-            if (userText < 1) {
-                this.errorValidationMessage(
-                    'The shipping method is missing. Select the shipping method and try again.'
-                );
-            } else if (userText >= 1) {
-                stepNavigator.next();
-            }
-        }
+        getGrandTotal: function() {
+            let freeShipping = 150;
+            let totals = quote.totals();
+            let sum = (totals ? totals : quote)['grand_total'];
+            let result = freeShipping - sum;
+
+            return result;
+
+        },
     });
 });
-
