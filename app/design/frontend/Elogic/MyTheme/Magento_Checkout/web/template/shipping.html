@@ -1,8 +1,18 @@
 <li id="shipping" class="checkout-shipping-address" data-bind="fadeVisible: visible()">
+    <!-- ko if: (isCustomerLoggedIn) -->
+    <h1>Login</h1>
     <div class="step-title" translate="'Shipping Address'" data-role="title" data-bind="mageInit: {'collapsible':{'openedState': '_active'}}"></div>
+    <!-- /ko -->
+
+    <!-- ko ifnot: (isCustomerLoggedIn) -->
+    <h1>NotLogin</h1>
+    <div class="step-title" translate="'Shipping Address'" data-role="title"></div>
+    <!-- /ko -->
     <div id="checkout-step-shipping"
          class="step-content"
          data-role="content">
+
+
 
         <each if="!quoteIsVirtual" args="getRegion('customer-email')" render="" ></each>
         <each args="getRegion('address-list')" render="" ></each>
@@ -36,9 +46,13 @@
     data-bind="fadeVisible: visible(), blockLoader: isLoading"
     role="presentation">
     <div class="checkout-shipping-method">
+
         <div class="step-title"
+             id="shipping-title"
              translate="'Shipping Methods'"
-             data-role="title" data-bind="mageInit: {'collapsible':{'openedState': '_active'}}"></div>
+             data-role="title"
+             data-bind="mageInit: {'collapsible':{'openedState': '_active', 'disabled': true}}, click: openNextTab()"></div>
+
 
         <each args="getRegion('before-shipping-method-form')" render="" ></each>
 
@@ -83,4 +97,5 @@
     <!--    add your cms block -->
 
 </li>
+
 
