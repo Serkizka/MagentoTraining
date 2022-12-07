@@ -21,7 +21,7 @@
                                                                     <item name="provider" xsi:type="string">checkoutProvider</item>
                                                                     <item name="config" xsi:type="array">
                                                                         <!-- And this to add your html template  -->
-                                                                        <item name="template" xsi:type="string">Elogic_sidebarForCustomCheckout/checkout-free-shipping</item>
+
                                                                     </item>
 
                                                                     <item name="children" xsi:type="array">

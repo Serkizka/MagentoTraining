@@ -30,14 +30,5 @@ define([
          * This method can have any name.
          */
 
-        getGrandTotal: function() {
-            let freeShipping = 150;
-            let totals = quote.totals();
-            let sum = (totals ? totals : quote)['grand_total'];
-            let result = freeShipping - sum;
-
-            return result;
-
-        },
     });
 });
