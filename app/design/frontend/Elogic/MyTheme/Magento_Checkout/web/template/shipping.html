@@ -1,5 +1,5 @@
 <li id="shipping" class="checkout-shipping-address" data-bind="fadeVisible: visible()">
-    <div class="step-title" translate="'Shipping Address'" data-role="title"></div>
+    <div class="step-title" translate="'Shipping Address'" data-role="title" data-bind="mageInit: {'collapsible':{'openedState': '_active'}}"></div>
     <div id="checkout-step-shipping"
          class="step-content"
          data-role="content">
@@ -38,7 +38,7 @@
     <div class="checkout-shipping-method">
         <div class="step-title"
              translate="'Shipping Methods'"
-             data-role="title"></div>
+             data-role="title" data-bind="mageInit: {'collapsible':{'openedState': '_active'}}"></div>
 
         <each args="getRegion('before-shipping-method-form')" render="" ></each>
 
