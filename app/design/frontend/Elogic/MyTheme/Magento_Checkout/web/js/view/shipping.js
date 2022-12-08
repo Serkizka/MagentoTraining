@@ -308,6 +308,8 @@ define([
             if (this.validateShippingInformation()) {
                 $("#shipping-title").collapsible("enable");
                 $("#shipping-title").collapsible("forceActivate");
+            } else {
+                $("#shipping-title").collapsible("disable");
             }
         },
 
