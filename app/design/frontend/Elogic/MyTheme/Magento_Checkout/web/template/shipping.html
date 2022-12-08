@@ -6,7 +6,7 @@
 
     <!-- ko ifnot: (isCustomerLoggedIn) -->
     <h1>NotLogin</h1>
-    <div class="step-title" translate="'Shipping Address'" data-role="title"></div>
+    <div class="step-title" translate="'Shipping Address'" data-role="title" data-bind="mageInit: {'collapsible':{'openedState': '_active', 'active': [0]}}"></div>
     <!-- /ko -->
     <div id="checkout-step-shipping"
          class="step-content"
