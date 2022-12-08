@@ -51,7 +51,7 @@
              id="shipping-title"
              translate="'Shipping Methods'"
              data-role="title"
-             data-bind="mageInit: {'collapsible':{'openedState': '_active', 'disabled': true}}, click: openNextTab()"></div>
+             data-bind="click: openNextTab, mageInit: {'collapsible':{'openedState': '_active', 'disabled': true}}"></div>
 
 
         <each args="getRegion('before-shipping-method-form')" render="" ></each>

@@ -278,7 +278,6 @@ define([
          * Set shipping information handler
          */
         setShippingInformation: function () {
-            alert('setShippingInformation');
 
             if (this.validateShippingInformation()) {
                 quote.billingAddress(null);
@@ -305,8 +304,8 @@ define([
          * Set shipping information handler
          */
         openNextTab: function () {
+            this.triggerShippingDataValidateEvent();
             if (this.validateShippingInformation()) {
-
                 $("#shipping-title").collapsible("enable");
                 $("#shipping-title").collapsible("forceActivate");
             }
