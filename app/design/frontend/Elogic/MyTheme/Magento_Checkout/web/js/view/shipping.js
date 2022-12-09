@@ -304,6 +304,12 @@ define([
          * Set shipping information handler
          */
         openNextTab: function () {
+            let emailValidationResult = customer.isLoggedIn(),
+                loginFormSelector = 'form[data-role=email-with-possible-login]';
+            if (!customer.isLoggedIn()) {
+                $(loginFormSelector).validation();
+                emailValidationResult = Boolean($(loginFormSelector + ' input[name=username]').valid());
+            }
             this.triggerShippingDataValidateEvent();
             if (this.validateShippingInformation()) {
                 $("#shipping-title").collapsible("enable");

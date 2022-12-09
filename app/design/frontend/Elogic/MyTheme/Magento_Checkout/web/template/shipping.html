@@ -14,7 +14,7 @@
 
 
 
-        <each if="!quoteIsVirtual" args="getRegion('customer-email')" render="" ></each>
+        <each id="field" if="!quoteIsVirtual" args="getRegion('customer-email')" render="" ></each>
         <each args="getRegion('address-list')" render="" ></each>
         <each args="getRegion('address-list-additional-addresses')" render="" ></each>
 
