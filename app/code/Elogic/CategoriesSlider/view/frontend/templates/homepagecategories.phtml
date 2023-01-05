@@ -1,0 +1,36 @@
+<?php
+// // get the list of all categories
+// $categories = $block->getCategoryCollection();
+// foreach ($categories as $category) {
+//     echo $category->getId() . '<br />';
+//     echo $category->getName() . '<br />';
+// }
+
+// // get categories sorted by category name
+// $categories = $block->getCategoryCollection(true, false, 'name', false);
+// foreach ($categories as $category) {
+//     echo $category->getId() . '<br />';
+//     echo $category->getName() . '<br />';
+// }
+
+// get current store’s categories
+$categories = $block->getStoreCategories();
+echo '<div class="slick-slider">';
+
+foreach ($categories as $category) {
+    // echo $category->getId() . '<br />';
+
+    echo ' <div class = "item"> ' .  $category->getName() . ' </div> ';
+
+}
+echo '</div>';
+?>
+
+
+<script type="text/x-magento-init">
+    {
+    "*": {
+      "CategoriesSlider": {}
+  }
+}
+</script>
